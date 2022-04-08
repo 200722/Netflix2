@@ -7,12 +7,8 @@ const Series = () => {
     <div className="movies">
       <Navbar />
       <Featured type="seri" />
-      {/* type="serires"  */}
-      {/* <List />
       <List />
       <List />
-      <List /> */}
-
       <List />
     </div>
   );

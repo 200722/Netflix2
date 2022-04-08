@@ -12,13 +12,15 @@
     display: flex;
     align-items: center;
 
-    select {
+    .cat {
       cursor: pointer;
       background-color: var(--main-color);
       border: 1px solid white;
-      color: white;
-      margin-left: 20px;
-      padding: 5px;
+      color: #0e0b0b;
+      margin-left: 28px;
+      width: 184px;
+      margin: 9%;
+      font-size: 55%;
     }
   }
 

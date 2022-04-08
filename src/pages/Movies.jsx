@@ -8,12 +8,8 @@ const Movies = () => {
     <div className="movies">
       <Navbar />
       <Featured type="movie" />
-      {/* type="serires"  */}
-      {/* <List />
       <List />
       <List />
-      <List /> */}
-
       <List />
     </div>
   );

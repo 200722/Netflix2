@@ -1,14 +1,33 @@
 import { InfoOutlined, PlayArrow } from "@material-ui/icons";
 import "./featured.scss";
-
+import { getCategories } from "../../frontend-case-api";
+import Select from "react-select";
+import { useState, useEffect } from "react";
+// Fetch The data from api it's at frontend-case-API
 export default function Featured({ type }) {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    async function fetchCategories() {
+      await getCategories(setCategories);
+    }
+    fetchCategories();
+  }, []);
+
   return (
     <div className="featured">
       {type && (
         <div className="category">
           <span>{type === "movie" ? "Movies" : "Series"}</span>
-          <select name="genre" id="genre">
-            <option>Genre</option>
+          <Select
+            name="select"
+            id="genre"
+            options={categories}
+            className="cat"
+          />
+          <br />
+          {/* <select>
+            <optio>Genre</optio>
             <option value="adventure">Adventure</option>
             <option value="comedy">Comedy</option>
             <option value="crime">Crime</option>
@@ -22,7 +41,7 @@ export default function Featured({ type }) {
             <option value="animation">Animation</option>
             <option value="drama">Drama</option>
             <option value="documentary">Documentary</option>
-          </select>
+          </select> */}
         </div>
       )}
       <img
