@@ -1,0 +1,7 @@
+Menu (zwart als scrolld, active)
+
+mongo database connection 
+
+map server om veder te gaan 
+
+apiData ophalen voor categories 
